@@ -30,10 +30,13 @@ import Renderable from '@mystroken/canvas/Renderable';
 
 ```javascript
 class Circle extends Renderable {
-    constructor() {}
-    
-    render() {
+
+    render(ctx) {
+        ctx.beginPath();
+        ctx.arc(110, 110, 25, Math.PI * 2, false);
+        ctx.closePath();
         
+        ctx.stroke();
     }
 }
 ```
@@ -54,5 +57,3 @@ canvas.add(rect);
 // Render the canvas.
 canvas.render();
 ```
-
-
