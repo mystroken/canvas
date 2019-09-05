@@ -1,0 +1,28 @@
+{
+  "name": "@mystroken/canvas",
+  "version": "0.0.1",
+  "description": "Object oriented canvas rendering in JavaScript.",
+  "main": "index.js",
+  "author": "Mystro Ken <mystroken@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "homepage": "https://github.com/mystroken/canvas#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mystroken/canvas.git"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "javascript",
+    "Canvas",
+    "library",
+    "creativecoding"
+  ],
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
