@@ -1,8 +1,8 @@
 # Canvas
 
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/mystroken/s/issues)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/mystroken/canvas/issues)
 
-> Object oriented canvas 2D rendering in JavaScript.
+> :kiwi_fruit: Object oriented canvas 2D rendering in JavaScript.
 
 <br>
 
