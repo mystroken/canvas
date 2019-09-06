@@ -1,7 +1,7 @@
 {
   "name": "@mystroken/canvas",
-  "version": "0.0.1",
-  "description": "Object oriented canvas rendering in JavaScript.",
+  "version": "0.0.2",
+  "description": "Object oriented canvas 2D rendering in JavaScript.",
   "main": "index.js",
   "author": "Mystro Ken <mystroken@gmail.com>",
   "license": "MIT",
@@ -14,11 +14,13 @@
     "url": "git+https://github.com/mystroken/canvas.git"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "Renderable.js"
   ],
   "keywords": [
     "javascript",
-    "Canvas",
+    "canvas",
+    "2d",
     "library",
     "creativecoding"
   ],

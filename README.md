@@ -2,7 +2,7 @@
 
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/mystroken/s/issues)
 
-> Object oriented canvas rendering in JavaScript.
+> Object oriented canvas 2D rendering in JavaScript.
 
 <br>
 
@@ -35,7 +35,7 @@ class Circle extends Renderable {
         ctx.beginPath();
         ctx.arc(110, 110, 25, Math.PI * 2, false);
         ctx.closePath();
-        
+
         ctx.stroke();
     }
 }
