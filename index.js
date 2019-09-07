@@ -21,7 +21,7 @@ function Canvas(element) {
   this.cx = this.el.getContext('2d');
 
   // Keep a list of renderable items.
-  this.Rs = [];
+  this.rs = [];
 }
 
 Canvas.prototype = {
@@ -35,7 +35,7 @@ Canvas.prototype = {
     if (typeof r !== 'object' || !(r instanceof Renderable))
       throw new TypeError('Invalid renderable provided');
 
-    this.Rs.push(r);
+    this.rs.push(r);
   },
 
   /**
@@ -44,7 +44,7 @@ Canvas.prototype = {
    * @param {Renderable} r renderable object.
    */
   remove: function(r) {
-    this.Rs.splice(r, 1);
+    this.rs.splice(r, 1);
   },
 
   /**
@@ -69,8 +69,8 @@ Canvas.prototype = {
     this.clear();
 
     var ctx = this.cx;
-    this.Rs.forEach(function(R) {
-      R.render(ctx);
+    this.rs.forEach(function(r) {
+      r.render(ctx);
     });
   },
 
@@ -81,9 +81,6 @@ Canvas.prototype = {
    * @param {number} h the height.
    */
   resize: function(w, h) {
-    this.el.style.width = w + 'px';
-    this.el.style.height = h + 'px';
-
     this.cx.canvas.width = w;
     this.cx.canvas.height = h;
   },

@@ -1,6 +1,6 @@
 {
   "name": "@mystroken/canvas",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Object oriented canvas 2D rendering in JavaScript.",
   "main": "index.js",
   "author": "Mystro Ken <mystroken@gmail.com>",
