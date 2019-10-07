@@ -81,8 +81,16 @@ Canvas.prototype = {
    * @param {number} h the height.
    */
   resize: function(w, h) {
-    this.cx.canvas.width = w;
-    this.cx.canvas.height = h;
+    // Get the device pixel ratio,
+    // falling back to 1.
+    var dpr = window.devicePixelRatio || 1;
+
+    // Give the canvas pixel dimensions * device pixel ratio.
+    this.cx.canvas.width = w * dpr;
+    this.cx.canvas.height = h * dpr;
+
+    // Scale all drawing operations by the dpr.
+    this.cx.scale(dpr, dpr);
   },
 
   /**
