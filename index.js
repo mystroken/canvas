@@ -39,6 +39,18 @@ Canvas.prototype = {
   },
 
   /**
+   * Adds a renderable onto canvas (at the first list).
+   *
+   * @param {Renderable} r renderable object.
+   */
+  prepend: function(r) {
+    if (typeof r !== 'object' || !(r instanceof Renderable))
+      throw new TypeError('Invalid renderable provided');
+
+    this.rs.unshift(r);
+  },
+
+  /**
    * Remove a renderable.
    *
    * @param {Renderable} r renderable object.
@@ -69,8 +81,10 @@ Canvas.prototype = {
     this.clear();
 
     var ctx = this.cx;
+    var width = this.cx.canvas.width;
+    var height = this.cx.canvas.height;
     this.rs.forEach(function(r) {
-      r.render(ctx);
+      r.render(ctx, width, height);
     });
   },
 
