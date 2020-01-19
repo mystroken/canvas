@@ -21,6 +21,7 @@ function Canvas(element) {
   this.cx = this.el.getContext('2d');
 
   // Keep a list of renderable items.
+  this.L = 0; // listeners number.
   this.rs = [];
 }
 
@@ -36,6 +37,7 @@ Canvas.prototype = {
       throw new TypeError('Invalid renderable provided');
 
     this.rs.push(r);
+    this.L = this.rs.length;
   },
 
   /**
@@ -48,6 +50,7 @@ Canvas.prototype = {
       throw new TypeError('Invalid renderable provided');
 
     this.rs.unshift(r);
+    this.L = this.rs.length;
   },
 
   /**
@@ -57,6 +60,7 @@ Canvas.prototype = {
    */
   remove: function(r) {
     this.rs.splice(r, 1);
+    this.L = this.rs.length;
   },
 
   /**
@@ -83,9 +87,9 @@ Canvas.prototype = {
     var ctx = this.cx;
     var width = this.cx.canvas.width;
     var height = this.cx.canvas.height;
-    this.rs.forEach(function(r) {
-      r.render(ctx, width, height);
-    });
+    for (var i = 0; i < this.L; i++) {
+      this.rs[i].render(ctx, width, height);
+    }
   },
 
   /**
