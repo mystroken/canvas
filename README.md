@@ -45,6 +45,7 @@ class Circle extends Renderable {
 
 ```javascript
 const canvas = new Canvas(document.querySelector('#canvas'));
+canvas.resize(window.innerWidth, window.innerHeight);
 
 // Get some renderables.
 const circle = new Circle();
